@@ -106,7 +106,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-express');
 
   // Default task(s).
-  grunt.registerTask('default', ['express', 'watch']);
+  grunt.registerTask('default', ['jade:dev', 'express', 'watch']);
 //   grunt.registerTask('default', ['less:dev', 'jade:dev', 'express', 'watch']);
   grunt.registerTask('prod', ['less:prod', 'jade:prod']);
 

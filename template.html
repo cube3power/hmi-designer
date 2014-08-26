@@ -1,56 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>HMI Designer</title>
-    <link type="text/css" rel="stylesheet" href="media/css/jquery-ui-1.9.1.css">
-    <link type="text/css" rel="stylesheet" href="media/css/h5bp.css">
-    <link type="text/css" rel="stylesheet" href="media/css/screen.css">
-  </head>
-  <body>
-    <nav><a class="documents">Select a Document</a><a class="properties">Properties</a><a class="import-export">Import / Export</a>
-      <section id="documents">
-        <h3>Documents</h3>
-        <ul></ul>
-        <h3>Create a new document</h3>
-        <form>
-          <input id="id_title" type="text" name="title">
-        </form>
-      </section>
-      <section id="document-properties">
-        <h3>Document Properties</h3>
-        <form>
-          <label for="id_title">Title</label>
-          <input id="id_title" type="text" name="title">
-          <div class="width">
-            <label for="id_width">Width</label>
-            <input id="id_width" type="text" name="width">
-          </div>
-          <div class="height">
-            <label for="id_height">Height</label>
-            <input id="id_height" type="text" name="height">
-          </div>
-          <input id="save" type="submit" value="Save">
-        </form>
-      </section>
-      <section id="document-import-export">
-        <h3>Import / Export</h3>
-        <form>
-          <label for="id_models">Models</label>
-          <textarea id="id_models" name="textarea" rows="10" cols="60"></textarea>
-          <input id="import" type="submit" value="Import"><a class="export-image">Export PNG</a>
-        </form>
-      </section>
-    </nav>
-    <aside></aside>
-    <header>
-      <h1></h1>
-    </header>
-    <article></article>
-    <footer>
-      <h2>Properties</h2>
-      <form class="properties"></form>
-    </footer>
-    <div id="social"></div>
+
 <script type="text/html" id="navigation-item-template">
     <a class="show" href="#document/<%= id %>"><%= title %></a>
     <a class="destroy" href="#">Delete</a>
@@ -195,24 +143,3 @@
 <script type="text/html" id="shape-template">
     <div class="shape" style="background-color: <%= color %>; <%= border ? '' : 'border:none' %>"></div>
 </script>
-
-    <script src="js/libs/jquery-1.8.2.min.js"></script>
-    <script src="js/libs/jquery-ui-1.9.0.min.js"></script>
-    <script src="js/libs/underscore-1.4.2.min.js"></script>
-    <script src="js/libs/backbone-0.9.2.min.js"></script>
-    <script src="js/libs/html2canvas.min.js"></script>
-    <script src="js/libs/local-storage.js"></script>
-    <script src="js/init.js"></script>
-    <script src="media/js/fixtures/demo-document.js"></script>
-    <script src="media/js/fixtures/toolbox.js"></script>
-    <script src="media/js/routers/document.js"></script>
-    <script src="media/js/models/document.js"></script>
-    <script src="media/js/models/mockup.js"></script>
-    <script src="media/js/models/toolbox.js"></script>
-    <script src="media/js/views/document.js"></script>
-    <script src="media/js/views/toolbox.js"></script>
-    <script src="media/js/views/mockup.js"></script>
-    <script src="media/js/views/properties.js"></script>
-    <script src="js/index.js"></script>
-  </body>
-</html>

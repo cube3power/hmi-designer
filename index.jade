@@ -1,0 +1,68 @@
+doctype html
+html
+  head
+    title HMI Designer
+    link(type="text/css", rel="stylesheet", href="media/css/jquery-ui-1.9.1.css")
+    link(type="text/css", rel="stylesheet", href="media/css/h5bp.css")
+    link(type="text/css", rel="stylesheet", href="media/css/screen.css")
+  body
+    nav
+      a.documents Select a Document
+      a.properties Properties
+      a.import-export Import / Export
+      section#documents
+        h3 Documents
+        ul
+        h3 Create a new document
+        form
+          input#id_title(type="text", name="title")
+      section#document-properties
+        h3 Document Properties
+        form
+          label(for="id_title") Title
+          input#id_title(type="text", name="title")
+          .width
+            label(for="id_width") Width
+            input#id_width(type="text", name="width")
+          .height
+            label(for="id_height") Height
+            input#id_height(type="text", name="height")
+          input#save(type="submit", value="Save")
+      section#document-import-export
+        h3 Import / Export
+        form
+          label(for="id_models") Models
+          textarea#id_models(name="textarea", rows="10", cols="60")
+          input#import(type="submit", value="Import")
+          a.export-image Export PNG
+    aside
+    header
+      h1
+    article
+    footer
+      h2 Properties
+      form.properties
+    #social
+
+    include template.html
+
+    script(src="js/libs/jquery-1.8.2.min.js")
+    script(src="js/libs/jquery-ui-1.9.0.min.js")
+    script(src="js/libs/underscore-1.4.2.min.js")
+    script(src="js/libs/backbone-0.9.2.min.js")
+    script(src="js/libs/html2canvas.min.js")
+    script(src="js/libs/local-storage.js")
+
+    script(src="js/init.js")
+    script(src="media/js/fixtures/demo-document.js")
+    script(src="media/js/fixtures/toolbox.js")
+    script(src="media/js/routers/document.js")
+    script(src="media/js/models/document.js")
+    script(src="media/js/models/mockup.js")
+    script(src="media/js/models/toolbox.js")
+    script(src="media/js/views/document.js")
+    script(src="media/js/views/toolbox.js")
+    script(src="media/js/views/mockup.js")
+    script(src="media/js/views/properties.js")
+    script(src="js/index.js")
+

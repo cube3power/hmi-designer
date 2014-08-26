@@ -1,13 +1,23 @@
-//require('bower_components');
-// require.config({
-//     baseUrl: 'bower_components',
-//     paths: {
-//     }
-// });
-require('bower_components/jquery/dist/jquery.min');
-require('jquery-ui/jquery-ui.min');
-require('underscore/underscore');
-require('backbone/backbone-min');
-require('html2canvas/build/html2canvas.min');
-require('backbone.localStorage/backbone.localStorage-min');
+usemockups.toolbox = new usemockups.collections.Toolbox(usemockups.fixtures.toolbox);
 
+usemockups.custom_mockup_views = {
+    "table": usemockups.views.TableMockup
+};
+
+$(function () {
+
+    var documents = new usemockups.collections.Documents();
+    var router = new usemockups.routers.Document({
+        documents: documents
+    });
+
+    Backbone.history.start({
+        pushState: false // !!(window.history && window.history.pushState)
+    });
+
+    new usemockups.views.Navigation({
+        router: router,
+        model: documents
+    });
+
+});
