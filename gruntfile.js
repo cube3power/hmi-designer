@@ -18,7 +18,7 @@ module.exports = function(grunt) {
           paths: ["css"]
         },
         files: {
-          "css/style.css": "less/style.less"
+          "media/css/screen.css": "media/less/screen.less"
         }
       },
       prod: {
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          "css/style.css": "less/style.less"
+          "media/css/screen.css": "media/less/screen.less"
         }
       }
     },
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
           }
       },
       jade: {
-        files: '**/*.jade',
+        files: ['**/*.jade', 'template.html'],
         tasks: ['jade:dev'],
         options: {
           livereload: true,
@@ -106,8 +106,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-express');
 
   // Default task(s).
-  grunt.registerTask('default', ['jade:dev', 'express', 'watch']);
-//   grunt.registerTask('default', ['less:dev', 'jade:dev', 'express', 'watch']);
+  grunt.registerTask('default', ['less:dev', 'jade:dev', 'express', 'watch']);
   grunt.registerTask('prod', ['less:prod', 'jade:prod']);
 
 };

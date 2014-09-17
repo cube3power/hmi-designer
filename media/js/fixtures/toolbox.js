@@ -1,12 +1,12 @@
 usemockups.fixtures.toolbox = [
     {
-        "name":"button",
-        "category":"form",
+        "name":"submit",
+        "category":"basic",
         "template":"#button-template",
         "attributes":[
             {
                 "name":"text",
-                "default":"Button"
+                "default":"test"
             },
             {
                 "name":"width",
@@ -16,7 +16,7 @@ usemockups.fixtures.toolbox = [
     },
     {
         "name":"checkbox",
-        "category":"form",
+        "category":"basic",
         "template":"#checkbox-template",
         "attributes":[
             {
@@ -32,8 +32,8 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
-        "name":"combobox",
-        "category":"form",
+        "name":"toggle",
+        "category":"basic",
         "template":"#combobox-template",
         "attributes":[
             {
@@ -47,8 +47,8 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
-        "name":"hscrollbar",
-        "category":"form",
+        "name":"link",
+        "category":"basic",
         "template":"#hscrollbar-template",
         "attributes":[
             {
@@ -62,8 +62,8 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
-        "name":"progressbar",
-        "category":"form",
+        "name":"slider",
+        "category":"basic",
         "template":"#progressbar-template",
         "attributes":[
             {
@@ -77,8 +77,8 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
-        "name":"browser",
-        "category":"form",
+        "name":"text_area",
+        "category":"basic",
         "template":"#browser-template",
         "attributes":[
             {
@@ -100,8 +100,8 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
-        "name":"groupbox",
-        "category":"form",
+        "name":"video",
+        "category":"basic",
         "template":"#groupbox-template",
         "attributes":[
             {
@@ -120,7 +120,7 @@ usemockups.fixtures.toolbox = [
     },
     {
         "name":"radio",
-        "category":"form",
+        "category":"basic",
         "template":"#radio-template",
         "attributes":[
             {
@@ -136,8 +136,8 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
-        "name":"text",
-        "category":"form",
+        "name":"text_input",
+        "category":"basic",
         "template":"#text-template",
         "min_height":20,
         "attributes":[
@@ -182,47 +182,7 @@ usemockups.fixtures.toolbox = [
     },
 
     {
-        "name":"paragraph",
-        "category":"typography",
-        "template":"#paragraph-template",
-        "attributes":[
-            {
-                "name":"text",
-                "default":"Lorem ipsum dolor sit amet"
-            },
-            {
-                "name":"width",
-                "default":300
-            },
-            {
-                "name":"background",
-                "default":"#dedede"
-            }
-        ]
-    },
-
-    {
-        "name":"label",
-        "category":"typography",
-        "template":"#label-template",
-        "attributes":[
-            {
-                "name":"text",
-                "default":"Label"
-            },
-            {
-                "name":"size",
-                "default": 18
-            },
-            {
-                "name":"color",
-                "default":"#383838"
-            }
-        ]
-    },
-
-    {
-        "name":"table",
+        "name":"html",
         "category":"content",
         "template":"#table-template",
         "attributes":[
@@ -272,9 +232,9 @@ usemockups.fixtures.toolbox = [
     },
 
     {
-        "name":"rectangle",
-        "category":"shapes",
-        "template":"#shape-template",
+        "name":"range_gauge",
+        "category":"gauge",
+        "template":"#range-gauge",
         "min_height":1,
         "min_width":1,
         "attributes":[
@@ -299,9 +259,9 @@ usemockups.fixtures.toolbox = [
     },
 
     {
-        "name":"circle",
-        "category":"shapes",
-        "template":"#shape-template",
+        "name":"range_indicator",
+        "category":"gauge",
+        "template":"#range-indicator",
         "attributes":[
             {
                 "name":"width",
