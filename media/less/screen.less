@@ -48,12 +48,10 @@
 @width2: 120px; // Appears 5 times
 @width4: 200px; // Appears 2 times
 @width10: 400px; // Appears 2 times
-@width18: 100%; // Appears 14 times
 @width19: 20px; // Appears 2 times
 @width23: 48%; // Appears 2 times
 
 // Height variables (appears count calculates by raw css)
-@height2: 100%; // Appears 10 times
 @height3: 20px; // Appears 2 times
 @height4: 30px; // Appears 2 times
 
@@ -66,7 +64,7 @@ body {
 aside {
     -webkit-box-shadow: 0 0 20px @color16;
     background: @color15;
-    height: @height2;
+    height: 100%;
     padding-top: 10px;
     position: fixed;
     top: 0;
@@ -159,7 +157,7 @@ nav {
     }
     ul {
         margin: 0;
-        width: @width18;
+        width: 100%;
         li {
             margin: 0;
             padding: 0;
@@ -264,7 +262,7 @@ footer {
     bottom: 0;
     display: none;
     position: fixed;
-    width: @width18;
+    width: 100%;
     form {
         padding-left: 4px;
         .line {
@@ -277,7 +275,7 @@ footer {
         input {
             outline: none;
             padding: 2px 4px;
-            width: @width18;
+            width: 100%;
         }
         label {
             color: @color11;
@@ -325,7 +323,7 @@ footer>* {
         margin: 0;
         outline: none;
         padding: 0;
-        width: @width18;
+        width: 100%;
     }
     .button {
         background-color: @color1;
@@ -398,7 +396,7 @@ footer>* {
         position: absolute;
     }
     .text-input {
-        height: @height2;
+        height: 100%;
         label {
             color: @color0;
             cursor: move;
@@ -408,14 +406,14 @@ footer>* {
         .input {
             background-color: @color1;
             border: 3px solid @color0;
-            height: @height2;
-            width: @width18;
+            height: 100%;
+            width: 100%;
         }
     }
     table {
         background-color: @color1;
         border: 3px solid @color0;
-        width: @width18;
+        width: 100%;
         td {
             border: 1px solid @color9;
             padding: 5px 10px;
@@ -442,7 +440,7 @@ footer>* {
         border: 3px solid @color0;
         min-width: @width2;
         overflow: hidden;
-        width: @width18;
+        width: 100%;
         .text {
             float: left;
             padding: 3px 5px 3px;
@@ -467,10 +465,10 @@ footer>* {
         height: @height4;
         min-width: @width2;
         overflow: hidden;
-        width: @width18;
+        width: 100%;
         .trough {
             background-color: black;
-            height: @height2;
+            height: 100%;
             width: 30px;
         }
         .left {
@@ -502,10 +500,10 @@ footer>* {
         border: 3px solid @color0;
         height: @height4;
         min-width: @width2;
-        width: @width18;
+        width: 100%;
         .bar {
             background-color: black;
-            height: @height2;
+            height: 100%;
             width: 50%;
         }
     }
@@ -515,8 +513,8 @@ footer>* {
         border: 3px solid @color0;
         color: @color0;
         display:table;
-        height: @height2;
-        width: @width18;
+        height: 100%;
+        width: 100%;
         .top {
             display:table-row;
             text-align: center;
@@ -533,7 +531,7 @@ footer>* {
         .page-content {
             border: 3px solid @color0;
             display:table-row;
-            height: @height2;
+            height: 100%;
             &:before {
                 content: " ";
             }
@@ -542,13 +540,13 @@ footer>* {
     fieldset {
         background-color: @color1;
         border: 3px solid @color0;
-        height: @height2;
-        width: @width18;
+        height: 100%;
+        width: 100%;
         legend {
             margin: 0 0 0 20px;
         }
         .content {
-            height: @height2;
+            height: 100%;
             &:before {
                 content: " ";
             }
@@ -558,7 +556,7 @@ footer>* {
         margin: 0;
     }
     .paragraph {
-        width: @width18;
+        width: 100%;
         p {
             margin: 0;
             padding: 5px;
@@ -571,8 +569,8 @@ footer>* {
     .shape {
         border-radius: 0;
         border: 3px solid @color0;
-        height: @height2;
-        width: @width18;
+        height: 100%;
+        width: 100%;
     }
     &:focus {
         .ui-resizable-handle {
@@ -621,6 +619,17 @@ footer>* {
     width: 60px;
 }
 #id_models {
-    width: @width18;
+    width: 100%;
+}
+#tag-select {
+    select {
+        width: 210px;
+    }
+    #controllers {
+        float: left;
+    }
+    #tags {
+        float: left;
+    }
 }
 

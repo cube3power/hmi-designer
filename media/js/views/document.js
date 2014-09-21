@@ -1,3 +1,22 @@
+usemockups.views.MobileDocument = Backbone.View.extend({
+    el: "body",
+
+    initialize: function () {
+    },
+
+    render: function () {
+
+        this.article = (new usemockups.views.Page({
+            model: this.model
+        }));
+        this.article.render();
+        $("nav").hide();
+        $("aside").hide();
+        $("article").css("margin", "0px 0px 0px 0px");
+        $("article > div").css("margin", "-95px 0px -50px -260px");
+    },
+});
+
 usemockups.views.Page = Backbone.View.extend({
     "el": "article",
 
@@ -227,6 +246,12 @@ usemockups.views.DocumentImportExportForm = Backbone.View.extend({
         this.$el.find("#id_models").val("");
         if (typeof this.model.mockups !== 'undefined' && this.model.mockups.length > 0) {
             this.$el.find("#id_models").val(JSON.stringify(this.model.mockups, null, 2));
+        }
+
+
+        this.$el.find("#new_models").val("");
+        if (typeof this.model.mockups !== 'undefined' && this.model.mockups.length > 0) {
+            this.$el.find("#new_models").val($("article").html());
         }
     },
 

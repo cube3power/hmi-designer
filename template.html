@@ -14,6 +14,11 @@
         <input type="checkbox" id="id_<%= attributes[attribute].name %>"
             name="<%= attributes[attribute].name %>"
             <% if (attributes[attribute].value) { %> checked="checked" <% } %> />
+    <% } else if (attributes[attribute].type == "tagselect") { %>
+        <br/>
+        <a id="id_<%= attributes[attribute].name %>" name="<%= attributes[attribute].name %>" href="#">
+            Select Tag
+        </a>
     <% } else { %>
         <input type="text" id="id_<%= attributes[attribute].name %>"
             name="<%= attributes[attribute].name %>"
@@ -145,7 +150,7 @@
 </script>
 
 <script type="text/html" id="range-gauge">
-    <div class="shape" style="background-color: <%= color %>; border:none;">
+    <div class="shape" style="border:none;">
         <img src="media/images/toolbox/range_gauge.png" />
     </div>
 </script>

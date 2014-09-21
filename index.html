@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>HMI Designer</title>
+    <meta name="viewport" content="width=device-width">
     <link type="text/css" rel="stylesheet" href="media/css/jquery-ui-1.9.1.css">
     <link type="text/css" rel="stylesheet" href="media/css/h5bp.css">
     <link type="text/css" rel="stylesheet" href="media/css/screen.css">
@@ -36,8 +37,49 @@
         <h3>Import / Export</h3>
         <form>
           <label for="id_models">Models</label>
-          <textarea id="id_models" name="textarea" rows="10" cols="60"></textarea>
+          <textarea id="id_models" name="textarea" rows="5" cols="60"></textarea>
+          <label for="new_models">NewModels</label>
+          <textarea id="new_models" name="textarea" rows="10" cols="60"></textarea>
           <input id="import" type="submit" value="Import"><a class="export-image">Export PNG</a>
+        </form>
+      </section>
+      <section id="tag-select">
+        <h3>Tag Select</h3>
+        <form>
+          <div id="controllers">
+            <label>Controllers</label>
+            <select size="10">
+              <option value="Lights at 10.25.34.21">Lights at 10.25.34.21</option>
+              <option value="None">None</option>
+            </select>
+          </div>
+          <div id="tags">
+            <label>Tags</label>
+            <select id="tags" size="10">
+              <option value="alloffindex">alloffindex</option>
+              <option value="air_temperature">air_temperature</option>
+              <option value="dawn">dawn</option>
+              <option value="debug">debug</option>
+              <option value="dusk">dusk</option>
+              <option value="index_light_control">index_light_control</option>
+              <option value="initialize_index">initialize_index</option>
+              <option value="is_holiday">is_holiday</option>
+              <option value="is_weekend">is_weekend</option>
+              <option value="light_index">light_index</option>
+              <option value="number_of_lights">number_of_lights</option>
+              <option value="rewrite_index">rewrite_index</option>
+              <option value="zone_cmd">zone_cmd</option>
+              <option value="zone_index">zone_index</option>
+              <option value="comm_status">comm_status</option>
+              <option value="current_day">current_day</option>
+              <option value="current_time">current_time</option>
+              <option value="dawn_off_time">dawn_off_time</option>
+              <option value="dawn_dalay">dawn_dalay</option>
+              <option value="day">day</option>
+              <option value="daylight">daylight</option>
+            </select>
+          </div>
+          <input type="submit" value="Close">
         </form>
       </section>
     </nav>
@@ -66,6 +108,11 @@
         <input type="checkbox" id="id_<%= attributes[attribute].name %>"
             name="<%= attributes[attribute].name %>"
             <% if (attributes[attribute].value) { %> checked="checked" <% } %> />
+    <% } else if (attributes[attribute].type == "tagselect") { %>
+        <br/>
+        <a id="id_<%= attributes[attribute].name %>" name="<%= attributes[attribute].name %>" href="#">
+            Select Tag
+        </a>
     <% } else { %>
         <input type="text" id="id_<%= attributes[attribute].name %>"
             name="<%= attributes[attribute].name %>"
@@ -197,7 +244,7 @@
 </script>
 
 <script type="text/html" id="range-gauge">
-    <div class="shape" style="background-color: <%= color %>; border:none;">
+    <div class="shape" style="border:none;">
         <img src="media/images/toolbox/range_gauge.png" />
     </div>
 </script>

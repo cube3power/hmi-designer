@@ -1,10 +1,37 @@
 usemockups.routers.Document = Backbone.Router.extend({
     routes: {
         "document/:id": "get_document",
+        "mobile/:id": "get_mobile_document",
         "": "index"
     },
     initialize: function (options) {
         this.documents = options.documents;
+    },
+    get_mobile_document: function (document_id) {
+
+        var document = new usemockups.models.Document({
+            "id": document_id
+        });
+
+        document.fetch();
+
+        if (usemockups.active_document_view) {
+            usemockups.active_document_view.undelegateEvents();
+            usemockups.active_document_view.article.undelegateEvents();
+            usemockups.active_document_view.edit_form.undelegateEvents();
+            usemockups.active_document_view.import_export_form.undelegateEvents();
+        }
+
+        if (usemockups.active_property_dialog) {
+            usemockups.active_property_dialog.hide();
+        }
+
+        usemockups.active_document_view = new usemockups.views.MobileDocument({
+            model: document
+        });
+
+        usemockups.active_document_view.render();
+
     },
     get_document: function (document_id) {
 

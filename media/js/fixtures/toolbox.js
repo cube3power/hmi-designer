@@ -239,6 +239,11 @@ usemockups.fixtures.toolbox = [
         "min_width":1,
         "attributes":[
             {
+                "name":"tag",
+                "default": "",
+                "type":"tagselect"
+            },
+            {
                 "name":"width",
                 "default":250
             },
@@ -247,13 +252,12 @@ usemockups.fixtures.toolbox = [
                 "default":100
             },
             {
-                "name":"color",
-                "default":"#dedede"
+                "name":"min",
+                "default":"10"
             },
             {
-                "name":"border",
-                "default":true,
-                "type":"boolean"
+                "name":"max",
+                "default":"60"
             }
         ]
     },

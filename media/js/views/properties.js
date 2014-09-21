@@ -16,9 +16,10 @@ usemockups.views.PropertyDialog = Backbone.View.extend({
 
         this.footer.show();
 
-        this.$el.html(_.template(this.template, {
+        var template = this.$el.html(_.template(this.template, {
             "attributes": this.get_attributes()
-        })).find("input").change(function (ui) {
+        }));
+        template.find("input").change(function (ui) {
 
 
             var input = $(ui.target);
@@ -36,6 +37,11 @@ usemockups.views.PropertyDialog = Backbone.View.extend({
 
         this.$el.find("a.delete").click(function () {
             this.destroy();
+            return false;
+        }.bind(this));
+
+        template.find("a").click(function () {
+            $("#tag-select").toggle();
             return false;
         }.bind(this));
 

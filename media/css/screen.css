@@ -587,3 +587,12 @@ footer > * {
 #id_models {
   width: 100%;
 }
+#tag-select select {
+  width: 210px;
+}
+#tag-select #controllers {
+  float: left;
+}
+#tag-select #tags {
+  float: left;
+}

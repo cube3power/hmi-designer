@@ -2,6 +2,7 @@ doctype html
 html
   head
     title HMI Designer
+    meta(name="viewport", content="width=device-width")
     link(type="text/css", rel="stylesheet", href="media/css/jquery-ui-1.9.1.css")
     link(type="text/css", rel="stylesheet", href="media/css/h5bp.css")
     link(type="text/css", rel="stylesheet", href="media/css/screen.css")
@@ -32,9 +33,25 @@ html
         h3 Import / Export
         form
           label(for="id_models") Models
-          textarea#id_models(name="textarea", rows="10", cols="60")
+          textarea#id_models(name="textarea", rows="5", cols="60")
+          label(for="new_models") NewModels
+          textarea#new_models(name="textarea", rows="10", cols="60")
           input#import(type="submit", value="Import")
           a.export-image Export PNG
+      section#tag-select
+        h3 Tag Select
+        form
+          #controllers
+            label Controllers
+            select(size=10)
+              each val in ['Lights at 10.25.34.21', 'None']
+                option(value=val)=val
+          #tags
+            label Tags
+            select#tags(size=10)
+              each val in ['alloffindex', 'air_temperature', 'dawn', 'debug', 'dusk', 'index_light_control', 'initialize_index', 'is_holiday', 'is_weekend', 'light_index', 'number_of_lights', 'rewrite_index', 'zone_cmd', 'zone_index', 'comm_status', 'current_day', 'current_time', 'dawn_off_time', 'dawn_dalay', 'day', 'daylight']
+                option(value=val)=val
+          input(type="submit", value="Close")
     aside
     header
       h1
