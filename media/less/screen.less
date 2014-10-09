@@ -31,9 +31,9 @@
 @color10: #5a5a5a; // Appears 1 time
 @color11: #484848; // Appears 1 time
 @color12: #414141; // Appears 1 time
-@color13: #2b2b2b; // Appears 1 time
-@color14: #e2e2e2; // Appears 1 time
-@color15: #323232; // Appears 1 time
+@leftpanelitemback: #04293B; // Appears 1 time
+@leftpanelheader: #B2CB7A; // Appears 1 time
+@leftpanel: #382B3C; // Appears 1 time
 @color16: #676767; // Appears 1 time
 @color17: #303030; // Appears 1 time
 @color18: #bebebe; // Appears 1 time
@@ -63,14 +63,14 @@ body {
 }
 aside {
     -webkit-box-shadow: 0 0 20px @color16;
-    background: @color15;
+    background: @leftpanel;
     height: 100%;
     padding-top: 10px;
     position: fixed;
     top: 0;
     width: 210px;
     h2 {
-        color: @color14;
+        color: @leftpanelheader;
         cursor: default;
         font-size: 18px;
         font-weight: normal;
@@ -84,7 +84,7 @@ aside {
         overflow: hidden;
         padding: 5px 0 0 10px;
         li {
-            background-color: @color13;
+            background-color: @leftpanelitemback;
             border-radius: 5px;
             display: block;
             float: left;

@@ -3,7 +3,7 @@ body {
 }
 aside {
   -webkit-box-shadow: 0 0 20px #676767;
-  background: #323232;
+  background: #382b3c;
   height: 100%;
   padding-top: 10px;
   position: fixed;
@@ -11,7 +11,7 @@ aside {
   width: 210px;
 }
 aside h2 {
-  color: #e2e2e2;
+  color: #b2cb7a;
   cursor: default;
   font-size: 18px;
   font-weight: normal;
@@ -26,7 +26,7 @@ aside .toolbox {
   padding: 5px 0 0 10px;
 }
 aside .toolbox li {
-  background-color: #2b2b2b;
+  background-color: #04293b;
   border-radius: 5px;
   display: block;
   float: left;
